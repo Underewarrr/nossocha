@@ -53,6 +53,7 @@ export default function Index() {
         phone_number,
       });
       setSucessRegister(true);
+      setFailedTryRegister(false)
       return data;
     } catch (error) {
       setFailedTryRegister(true);
