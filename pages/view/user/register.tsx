@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { Alert, Button, Card, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 import Header from "../../components/Header";
-import Loading from '../../components/Loading'
 
 
 export default function Index() {
@@ -63,7 +62,7 @@ export default function Index() {
         </Form.Group>
         {
           loading ? (
-        <Loading isLoading={loading} />
+        <p>Loading</p>
           ) : null
         }
         <div className="d-grid gap-2 mt-2">

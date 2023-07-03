@@ -1,10 +1,10 @@
 import React from 'react'
 import { BeatLoader } from 'react-spinners'
 
-const Loading = ( { isLoading } ) => {
+const Loading = ( { isloadingProps } ) => {
   return (
     <div className="loader-container">
-          <BeatLoader color="#fcba03" isLoading={isLoading} />
+          <BeatLoader color="#fcba03" isloadingProps={isloadingProps} />
         </div>
   )
 }

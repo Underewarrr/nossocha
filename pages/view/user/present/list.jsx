@@ -4,7 +4,6 @@ import axios from "axios";
 import Header from "../../../components/Header";
 import { Card, Container } from "react-bootstrap";
 import { BeatLoader } from 'react-spinners';
-import Loading from "../../../components/Loading";
 const list = ( ) => {
   const router = useRouter();
   const { id } = router.query;
@@ -29,7 +28,13 @@ const list = ( ) => {
     }
   }, [id]);
 
+  if (loading) {
+    return <p>Loading</p>
+  }
 
+  if (!present) {
+    return <div>Present not found</div>;
+  }
 
   return (
     <>
@@ -37,7 +42,7 @@ const list = ( ) => {
       <Container>
 
       <Card>
-        
+        TESTE
       </Card>
       </Container>
     </>
