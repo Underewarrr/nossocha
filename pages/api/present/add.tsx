@@ -15,12 +15,13 @@ export default async function userHandler(
 }
 
 const register = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { present, name, phone_number } = req.body;
+  const { present, name, phone_number ,acepted } = req.body;
 
   const { data, type, message, code } = await presentService.presentRegister(
     present,
     name,
-    phone_number
+    phone_number,
+    acepted,
   );
 
   try {

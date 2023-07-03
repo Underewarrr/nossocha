@@ -9,6 +9,7 @@ class Presents extends Model {
   present!: string;
   name!: string;
   phone_number!: number;
+  acepted!: boolean;
 
 }
 
@@ -31,6 +32,10 @@ Presents.init(
     },
     phone_number: {
       type: STRING(100),
+      allowNull: false,
+    },
+    acepted: {
+      type: BOOLEAN,
       allowNull: false,
     },
   },

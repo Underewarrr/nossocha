@@ -14,4 +14,5 @@ export type Present = {
   name: string;
   present: string
   phone_number: string;
+  acepted: boolean
 }

@@ -56,7 +56,8 @@ const removeCourseById = async (id: number) => {
 const presentRegister = async (
   present: string,
   name: string,
-  phone_number: string
+  phone_number: string,
+  acepted: boolean
 ) => {
   let data = await presentModel.findOne({ where: { name } });
 
@@ -70,6 +71,7 @@ const presentRegister = async (
     phone_number,
     present,
     name,
+    acepted: false,
   });
   data = dataValues;
 

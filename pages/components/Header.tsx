@@ -36,7 +36,18 @@ const Header = () => {
               Lista de Presentes
               </NavDropdown.Item>
             </NavDropdown>
-            
+             <NavDropdown title="Admin" id="collasible-nav-dropdown">
+
+              <NavDropdown.Item className={styles.header_text} href="/view/admin/present/add">
+                Login
+              </NavDropdown.Item>
+
+              <NavDropdown.Divider />
+
+              <NavDropdown.Item className={styles.header_text} href="/view/admin/present/list">
+              Lista de Presentes
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Nav>
             <Link

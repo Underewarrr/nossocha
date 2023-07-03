@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ResponsiveCardDinamicStyle from './ResponsiveCardDinamicStyle.jsx';
+import ResponsiveCardDinamicStyle from '../../user/present/ResponsiveCardDinamicStyle'
 import { BeatLoader } from 'react-spinners';
-import Loading from '../../../components/Loading';
+import Loading from "../../../components/Loading"
 import Header from '../../../components/Header'
+import ProtectedRoute from './../../../components/ProtectedRoute'
 
 const CourseCard = () => {
   const [presents, setCourses] = useState([]);
@@ -28,6 +29,7 @@ const CourseCard = () => {
   return (
     <>
       <Header />
+      <ProtectedRoute />
       {loading ? (
         <Loading isLoading={loading} />
         

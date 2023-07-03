@@ -19,6 +19,10 @@ module.exports = {
             allowNull: false,
             type: Sequelize.STRING(100),
         },
+        acepted: {
+          allowNull: false,
+          type: Sequelize.BOOLEAN,
+      },
         
       });
     },

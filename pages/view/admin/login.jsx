@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Alert, Button, Card, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 import Header from "../../components/Header";
-import Loading from '../../components/Loading'
+import Loading from "../../components/Loading";
 
 export default function Index() {
   const [email, setEmail] = useState("");
@@ -30,7 +30,7 @@ export default function Index() {
         }
       );
 
-      router.push("/view/user/course/list");
+      router.push("/view/admin/present/list");
       setToken(data.message);
       window.localStorage.setItem("key", data.message);
       window.localStorage.setItem("email", email);

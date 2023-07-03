@@ -4,14 +4,17 @@ module.exports = {
       "presents",
       [
         {
-          present: "Dildo",
-          name: "Capira pederasta",
+          present: "Cama de casal",
+          name: "Capira",
           phone_number: "35991968159",
+          acepted: true,
         },
         {
-          present: "Golden Helmet",
+          present: "Jogo de facas",
           name: "Rubini",
           phone_number: "35991968159",
+          acepted: false,
+
         },
       ],
       {}
