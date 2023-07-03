@@ -5,7 +5,6 @@ import { Alert, Button, Card, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 import Header from "../../components/Header";
 import Loading from '../../components/Loading'
-import BreadCumbPagesHeader from "./course/componenet/BreadCumbPagesHeader";
 
 export default function Index() {
   const [email, setEmail] = useState("");
@@ -48,9 +47,6 @@ export default function Index() {
     <>
 
       <Header />
-
-      <BreadCumbPagesHeader lastPage={'Home'} currentPage={'Login'} />
-
       <Card bg="dark" style={{ width: "", marginTop: "1rem" }} className="flex container p-2">
         <Form>
           <Form.Group controlId="formBasicEmail">

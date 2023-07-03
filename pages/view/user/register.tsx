@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { Alert, Button, Card, Form, Spinner } from "react-bootstrap";
 import axios from "axios";
 import Header from "../../components/Header";
-import { MDBBreadcrumb, MDBBreadcrumbItem, MDBCol, MDBRow } from "mdb-react-ui-kit";
 import Loading from '../../components/Loading'
 
 
@@ -37,20 +36,7 @@ export default function Index() {
   return (
     <>
       <Header />
-      <Card.Header
-      style={{ width: '', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem' }}
-      >
-      <MDBRow>
-      <MDBCol>
-          <MDBBreadcrumb className="bg-dark rounded-3 p-3 mb-4">
-              <MDBBreadcrumbItem>
-                  <a href='/'>Home</a>
-              </MDBBreadcrumbItem>
-              <MDBBreadcrumbItem active>Register</MDBBreadcrumbItem>
-          </MDBBreadcrumb>
-      </MDBCol>
-      </MDBRow>
-      </Card.Header>
+
       <Card
       bg="dark"
       style={{ width: '', marginTop: '1rem', marginLeft: '1rem', marginRight: '1rem' }}
