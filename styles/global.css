@@ -1,0 +1,55 @@
+html {
+    width: 100%;
+    height: 100%;
+  }
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(59, 58, 58);
+  }
+
+/* Loading Dots */
+.loader-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+  }
+
+
+ .nav-link {
+  color: #fcba03;
+ }
+ .nav-link:focus {
+  color: #fcba03;
+
+ }
+ .nav-link:hover {
+  color: #fcba03;
+ }
+
+
+ .dropdown-menu {
+  --bs-bg-opacity: 1;
+background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important;
+ }
+
+.navbar-toggler {
+  background-color: #ffbb00d5;
+}
+
+.dropdown-toggle show nav-link {
+  background-color: #ffbb00d5;
+  color: #fcba03;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+  color: #664b00;
+}
+
+.code {
+  color: palevioletred;
+  font-weight: bold;
+  font-size: 14px;
+}

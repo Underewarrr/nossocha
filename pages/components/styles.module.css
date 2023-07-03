@@ -1,0 +1,23 @@
+.header_title {
+  color:#fcba03 ;
+}
+.header_title:hover {
+  color: #997000;
+}
+
+.header_text {
+  color: #997000;
+}
+.header_text:hover {
+  color: rgb(59, 58, 58);
+  background-color: #fcba03;
+}
+
+.header_url {
+  color: #997000;
+}
+.header_url:hover {
+  color: #fcba03;
+  
+}
+
