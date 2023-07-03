@@ -1,52 +1,50 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Header from "../../../components/Header";
-import { Card, Container } from "react-bootstrap";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ResponsiveCardDinamicStyle from './ResponsiveCardDinamicStyle.jsx';
 import { BeatLoader } from 'react-spinners';
-const list = ( ) => {
-  const router = useRouter();
-  const { id } = router.query;
-  const [present, setPresent] = useState(null);
+import Loading from '../../../components/Loading';
+import Header from '../../../components/Header'
+
+const CourseCard = () => {
+  const [presents, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchCourse = async () => {
+    const fetchCourses = async () => {
       try {
-        const response = await axios.get(`/api/present/list`);
-        setPresent(response.data);
+        const response = await axios.get('/api/present/list');
+        setCourses(response.data);
         setLoading(false);
-        console.log(response.data);
+        console.log('api response', response.data);
       } catch (error) {
-        console.error("Error fetching course:", error);
+        console.error('Error fetching courses:', error);
         setLoading(false);
       }
     };
 
-    if (id) {
-      fetchCourse();
-    }
-  }, [id]);
-
-  if (loading) {
-    return <p>Loading</p>
-  }
-
-  if (!present) {
-    return <div>Present not found</div>;
-  }
+    fetchCourses();
+  }, []);
 
   return (
     <>
       <Header />
-      <Container>
-
-      <Card>
-        TESTE
-      </Card>
-      </Container>
+      {loading ? (
+        <Loading isLoading={loading} />
+        
+      ) : (
+        presents.map((present) => (
+          <ResponsiveCardDinamicStyle
+            key={present.id}
+            presentId={present.id}
+            phoneNumber={present.phone_number}
+            presentName={present.present}
+            presentDonator={present.name}
+           
+          />
+        ))
+      )}
     </>
   );
 };
 
-export default list;
+export default CourseCard;

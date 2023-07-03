@@ -53,5 +53,27 @@ const removeCourseById = async (id: number) => {
   }
 };
 
+const presentRegister = async (
+  present: string,
+  name: string,
+  phone_number: string
+) => {
+  let data = await presentModel.findOne({ where: { name } });
 
-export default { listAllPresent, getPresentById, getCourseByName, removeCourseById,  };
+
+  if (data) {
+    return { code: 409, type: "REGISTER_ERROR", message: "Nome existente!" };
+  }
+
+
+  const dataValues = await presentModel.create({
+    phone_number,
+    present,
+    name,
+  });
+  data = dataValues;
+
+  return { type: "REGISTRED", data, code: 201, dataValues };
+};
+
+export default { listAllPresent, getPresentById, getCourseByName, removeCourseById, presentRegister };

@@ -8,3 +8,10 @@ export type User = {
   balance: number;
   hasPremium: boolean;
 };
+
+export type Present = {
+  id: number;
+  name: string;
+  present: string
+  phone_number: string;
+}
