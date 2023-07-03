@@ -25,7 +25,7 @@ const Header = () => {
             <NavDropdown title="Inicial" id="collasible-nav-dropdown">
 
               <NavDropdown.Item className={styles.header_text} href="/view/user/course/add">
-                Adicionar Curso
+                ??
               </NavDropdown.Item>
 
               <NavDropdown.Divider />
