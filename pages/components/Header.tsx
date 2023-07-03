@@ -22,7 +22,7 @@ const Header = () => {
           <Nav className="me-auto">
             {/* <Nav.Link href="/view/user/course">Cursos</Nav.Link> */}
 
-            <NavDropdown title="Cursos" id="collasible-nav-dropdown">
+            <NavDropdown title="Inicial" id="collasible-nav-dropdown">
 
               <NavDropdown.Item className={styles.header_text} href="/view/user/course/add">
                 Adicionar Curso
@@ -31,31 +31,10 @@ const Header = () => {
               <NavDropdown.Divider />
 
               <NavDropdown.Item className={styles.header_text} href="/view/user/course/list">
-              Diponiveis
+              Lista de Presentes
               </NavDropdown.Item>
-              <NavDropdown.Item className={styles.header_text} href="/view/user/course/find">
-              Procurar
-              </NavDropdown.Item>
+              
             </NavDropdown>
-
-            <NavDropdown title="Conta" id="collasible-nav-dropdown">
-
-              <NavDropdown.Item className={styles.header_text} href="/user/balance/add">
-                Adicionar saldo
-              </NavDropdown.Item>
-
-              <NavDropdown.Divider />
-              <NavDropdown.Item className={styles.header_text} href="/view/user/login">
-              Entrar
-              </NavDropdown.Item>
-              <NavDropdown.Item className={styles.header_text} href="/view/user/register">
-              Registrar
-              </NavDropdown.Item>
-              <NavDropdown.Item className={styles.header_text} href="/view/user/recovery">
-              Recuperar
-              </NavDropdown.Item>
-            </NavDropdown>
-
             
           </Nav>
           <Nav>
