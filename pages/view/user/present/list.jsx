@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ResponsiveCardDinamicStyle from './ResponsiveCardDinamicStyle.jsx';
 import { BeatLoader } from 'react-spinners';
-import Loading from '../../../components/Loading.jsx';
-import Header from '../../../components/Header.js'
+import Loading from '../../../components/Loading';
+import Header from '../../../components/Header'
 
 const CourseCard = () => {
   const [presents, setCourses] = useState([]);
