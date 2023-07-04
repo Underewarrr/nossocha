@@ -17,7 +17,6 @@ const ResponsiveCard = ({
     setIsLoading(true);
   
     try {
-      const email = localStorage.getItem('email');
       const { data } = await axios.post(
         `/api/present/update?id=${presentId}`,
         {
@@ -42,7 +41,6 @@ const ResponsiveCard = ({
   };
   
 
-  const isEmailAvailable = localStorage.getItem('email') !== null;
 
   return (
     <Card className="main">
