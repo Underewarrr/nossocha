@@ -17,6 +17,7 @@ const ResponsiveCard = ({
     setIsLoading(true);
   
     try {
+      const email = localStorage.getItem('email');
       const { data } = await axios.post(
         `/api/present/update?id=${presentId}`,
         {
@@ -41,6 +42,7 @@ const ResponsiveCard = ({
   };
   
 
+  const isEmailAvailable = localStorage.getItem('email') !== null;
 
   return (
     <Card className="main">
@@ -60,12 +62,12 @@ const ResponsiveCard = ({
             ) : (
               <Alert variant="danger">Your present has not been approved yet.</Alert>
             )}
-            {!isAccepted && isEmailAvailable && (
+            {!isAccepted && (
               <Button onClick={handleToggleAcceptance} variant="success" disabled={isLoading}>
                 {isLoading ? 'Loading...' : 'Accept'}
               </Button>
             )}
-            {isAccepted && isEmailAvailable && (
+            {isAccepted && (
               <Button onClick={handleToggleAcceptance} variant="danger" disabled={isLoading}>
                 {isLoading ? 'Loading...' : 'Revoke'}
               </Button>
