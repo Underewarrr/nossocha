@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import courseService from "../../../services/course";
+import presentListService from "../../../services/presentList";
 
 export default async function listCoursesHandler(
   req: NextApiRequest,
@@ -14,7 +14,7 @@ export default async function listCoursesHandler(
 }
 
 const listCourses = async (_req: NextApiRequest, res: NextApiResponse) => {
-  const { data, type, message, code } = await courseService.listAllCourses();
+  const { data, type, message, code } = await presentListService.listAllPresent();
 
   try {
     if (type === "LIST_ERROR") {

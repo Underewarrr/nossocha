@@ -45,7 +45,13 @@ const Header = () => {
               <NavDropdown.Divider />
 
               <NavDropdown.Item className={styles.header_text} href="/view/admin/present/list">
-              Lista de Presentes
+              Lista de Presentes recebidos
+              </NavDropdown.Item>
+              <NavDropdown.Item className={styles.header_text} href="/view/admin/present-list/add">
+              Adicionar Presente
+              </NavDropdown.Item>
+              <NavDropdown.Item className={styles.header_text} href="/view/admin/present-list/list">
+              Ver meus Presente
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
