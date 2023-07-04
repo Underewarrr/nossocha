@@ -17,7 +17,7 @@ export default function Index() {
 
   const fetchPresentList = async () => {
     try {
-      const response = await axios.get('/api/present/list');
+      const response = await axios.get('/api/present-list/list');
       setPresentList(response.data);
       setLoading(false);
     } catch (error) {
