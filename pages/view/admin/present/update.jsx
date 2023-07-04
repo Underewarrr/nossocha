@@ -1,34 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, Button, Alert } from 'react-bootstrap';
-import { useRouter } from 'next/router';
-import axios from "axios"
-
+import axios from 'axios';
 
 const ResponsiveCard = ({
   presentId,
   presentName,
   phoneNumber,
   presentDonator,
-  acepted,
+  accepted,
 }) => {
-  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
 
-
-
-  const handleAcceptPresent = async (presentId) => {
+  const handleToggleAcceptance = async () => {
+    setIsLoading(true);
     try {
-      
-      const response = await axios.put(`/api/present/update/${presentId}`, {
-        accepted: true,
+      const email = localStorage.getItem('email');
+      const response = await axios.put(`/api/present/update?id=${presentId}`, {
+        accepted: !accepted,
+        email: email,
       });
       console.log('API response:', response.data);
       // Handle the response or update the UI as needed
       // You may consider updating the 'presents' state with the updated data
     } catch (error) {
-      console.error('Error accepting present:', error);
+      console.error('Error updating present acceptance:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
-
 
   const isEmailAvailable = localStorage.getItem('email') !== null;
 
@@ -45,16 +44,20 @@ const ResponsiveCard = ({
           <p>Donator name: {presentDonator}</p>
           <p>Phone number: {phoneNumber}</p>
           <div className="d-flex justify-content-between">
-            {acepted ? (
+            {accepted ? (
               <Alert variant="success">Your present has been accepted.</Alert>
             ) : (
               <Alert variant="danger">Your present has not been approved yet.</Alert>
             )}
-            {!acepted && isEmailAvailable && (
-            <Button onClick={() => handleAcceptPresent(presentId)} variant="primary">
-            Accept
-          </Button>
-          
+            {!accepted && isEmailAvailable && (
+              <Button onClick={handleToggleAcceptance} variant="primary" disabled={isLoading}>
+                {isLoading ? 'Loading...' : 'Accept'}
+              </Button>
+            )}
+            {accepted && isEmailAvailable && (
+              <Button onClick={handleToggleAcceptance} variant="primary" disabled={isLoading}>
+                {isLoading ? 'Loading...' : 'Revoke'}
+              </Button>
             )}
           </div>
         </Card.Text>

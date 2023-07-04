@@ -42,7 +42,6 @@ const CourseCard = () => {
             presentName={present.present}
             presentDonator={present.name}
             acepted={present.acepted}
-           
           />
         ))
       )}

@@ -1,4 +1,34 @@
 import presentModel from "../database/models/Present";
+import accountModel from "../database/models/User";
+const updatePresentStatus = async (id: number, acepted: boolean) => {
+  try {
+    const present = await presentModel.findByPk(id);
+    if (!present) {
+      return {
+        code: 404,
+        type: 'UPDATE_ERROR',
+        message: 'Present not found',
+      };
+    }
+
+    present.acepted = acepted; // Change the accepted status to the provided value
+    await present.save();
+
+    return {
+      code: 200,
+      type: 'UPDATE_SUCCESS',
+      message: 'Present status updated successfully',
+    };
+  } catch (error) {
+    console.error('Error updating present status:', error);
+    return {
+      code: 500,
+      type: 'UPDATE_ERROR',
+      message: 'Error updating present status',
+    };
+  }
+};
+
 
 const listAllPresent = async () => {
   try {
@@ -78,4 +108,4 @@ const presentRegister = async (
   return { type: "REGISTRED", data, code: 201, dataValues };
 };
 
-export default { listAllPresent, getPresentById, getCourseByName, removeCourseById, presentRegister };
+export default { listAllPresent, getPresentById, getCourseByName, removeCourseById, presentRegister, updatePresentStatus };

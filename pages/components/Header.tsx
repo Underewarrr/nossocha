@@ -38,7 +38,7 @@ const Header = () => {
             </NavDropdown>
              <NavDropdown title="Admin" id="collasible-nav-dropdown">
 
-              <NavDropdown.Item className={styles.header_text} href="/view/admin/present/add">
+              <NavDropdown.Item className={styles.header_text} href="/view/admin/login">
                 Login
               </NavDropdown.Item>
 
