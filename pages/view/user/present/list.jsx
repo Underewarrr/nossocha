@@ -3,7 +3,7 @@ import axios from 'axios';
 import ResponsiveCardDinamicStyle from './ResponsiveCardDinamicStyle.jsx';
 import { BeatLoader } from 'react-spinners';
 import Loading from '../../../components/Loading';
-import Header from '../../../components/Header'
+import Header from '../../../components/Header.js'
 
 const CourseCard = () => {
   const [presents, setCourses] = useState([]);

@@ -1,72 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import Link from "next/link";
-import "bootstrap/dist/css/bootstrap.min.css";
-import styles from './styles.module.css';
+import React from 'react';
+import styles from './Header.module.css'; // CSS module for header styles
 
 const Header = () => {
-  const [email, setEmail] = useState('')
-
-
-  useEffect(() => {
-    const result = window.localStorage.getItem('email');
-    setEmail(result);
-  }, [])
-
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        
-        <Navbar.Brand className={styles.header_title} href="/">        <img src="https://media.discordapp.net/attachments/920991430133026856/1125516427307266068/logo.png?width=812&height=313" width={200} height={56  }/>
-</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" className={styles.navbar_toggle} />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            {/* <Nav.Link href="/view/user/course">Cursos</Nav.Link> */}
-
-            <NavDropdown title="Inicial" id="collasible-nav-dropdown">
-
-              <NavDropdown.Item className={styles.header_text} href="/view/user/present/add">
-                Cadastrar um presente
-              </NavDropdown.Item>
-
-              <NavDropdown.Divider />
-
-              <NavDropdown.Item className={styles.header_text} href="/view/user/present/list">
-              Lista de Presentes
-              </NavDropdown.Item>
-            </NavDropdown>
-             <NavDropdown title="Admin" id="collasible-nav-dropdown">
-
-              <NavDropdown.Item className={styles.header_text} href="/view/admin/login">
-                Login
-              </NavDropdown.Item>
-
-              <NavDropdown.Divider />
-
-              <NavDropdown.Item className={styles.header_text} href="/view/admin/present/list">
-              Lista de Presentes recebidos
-              </NavDropdown.Item>
-              <NavDropdown.Item className={styles.header_text} href="/view/admin/present-list/add">
-              Adicionar Presente
-              </NavDropdown.Item>
-              <NavDropdown.Item className={styles.header_text} href="/view/admin/present-list/list">
-              Ver meus Presente
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Link
-            href="/view/user/profile"
-            className={styles.header_url}
-            >
-              {email} 
-            </Link>
-
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <img src="https://i.postimg.cc/6qxrVM7V/chat.png" alt="Logo" />
+      </div>
+      <nav className={styles.nav}>
+        <ul>
+          <li><a href="#the-couple">O Casal</a></li>
+          <li><a href="#details">Detalhes do Casamento</a></li>
+          <li><a href="#gift-list">Lista de Presente</a></li>
+          <li><a href="#rsvp">Confirme sua Presença!</a></li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

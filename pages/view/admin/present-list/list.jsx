@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ResponsiveCardDinamicStyle from '../../user/present/ResponsiveCardDinamicStyle.jsx';
 import { BeatLoader } from 'react-spinners';
-import Header from "../../../components/Header";
+import Header from "../../../components/Header.js";
 import Loading from "../../../components/Loading";
 
 const CourseCard = () => {

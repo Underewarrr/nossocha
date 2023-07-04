@@ -1,5 +1,6 @@
 import presentModel from "../database/models/Present";
 import accountModel from "../database/models/User";
+
 const updatePresentStatus = async (id: number, acepted: boolean) => {
   try {
     const present = await presentModel.findByPk(id);

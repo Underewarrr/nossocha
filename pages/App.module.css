@@ -1,0 +1,207 @@
+.navbar {
+    background-color: #000;
+  }
+  
+  .menuHamburger {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .coverPage {
+    position: relative;
+    text-align: center;
+  }
+  
+  .bannerDesktop {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .bannerMobile {
+    display: none;
+    margin: 0 auto;
+  }
+  
+  .couple {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+  }
+  
+  .imgCoupleBanner {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .columnsCouple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .her,
+  .his {
+    width: 45%;
+  }
+  
+  .her .textBio,
+  .his .textBio {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .her h1,
+  .his h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .her p,
+  .his p {
+    margin-bottom: 20px;
+  }
+  
+  .clara,
+  .leo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .ringMenu {
+    position: relative;
+    text-align: center;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  
+  .ring {
+    width: 70px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .his .textBio:hover .hoverTheMouse,
+  .her .textBio:hover .hoverTheMouse {
+    display: none;
+  }
+  
+  .details {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .titleDetails {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .detailsContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .infoBlock {
+    width: 45%;
+  }
+  
+  .infoIcon img {
+    width: 50px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .infoText h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .infoText p {
+    margin-bottom: 5px;
+  }
+  
+  .giftList {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .giftList h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .giftList p {
+    margin-bottom: 20px;
+  }
+  
+  .giftListItems {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  .giftItem {
+    width: 30%;
+    margin-bottom: 40px;
+  }
+  
+  .giftItem img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .giftText h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .giftText p {
+    margin-bottom: 5px;
+  }
+  
+  .rsvp {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .rsvp h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .rsvpForm input,
+  .rsvpForm select,
+  .rsvpForm textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .rsvpForm textarea {
+    height: 100px;
+  }
+  
+  .rsvpForm button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
