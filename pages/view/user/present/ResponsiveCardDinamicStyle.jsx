@@ -13,10 +13,9 @@ const ResponsiveCard = ({
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [isAccepted, setIsAccepted] = useState(acepted);
-
   const handleToggleAcceptance = async () => {
     setIsLoading(true);
-
+  
     try {
       const email = localStorage.getItem('email');
       const { data } = await axios.post(
@@ -41,6 +40,7 @@ const ResponsiveCard = ({
       setIsLoading(false);
     }
   };
+  
 
   const isEmailAvailable = localStorage.getItem('email') !== null;
 
