@@ -1,5 +1,10 @@
 ### Health Status
 ...
+
+### Testando o app
+Email: admin@admin.com
+Password: teste
+
 ### Vercel
 - As funções [Serverless](https://vercel.com/docs/concepts/functions/serverless-functions) permitem que os desenvolvedores escrevam funções em JavaScript e outras linguagens para lidar com autenticação de usuário, envios de formulários, consultas de banco de dados  e muito mais.
 

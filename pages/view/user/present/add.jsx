@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Alert, Button, Card, Form } from "react-bootstrap";
 import axios from "axios";
@@ -14,8 +14,7 @@ export default function Index() {
   const [loading, setLoading] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [whatsappNumber, setWhatsappNumber] = useState("");
-
-  const presentsList = ["Present 1", "Present 2", "Present 3"];
+  const [presentsList, setPresentsList] = useState([]);
 
   const handleItemSelect = (item) => {
     if (selectedItems.includes(item)) {
@@ -53,12 +52,26 @@ export default function Index() {
         phone_number,
       });
       setSucessRegister(true);
-      setFailedTryRegister(false)
+      setFailedTryRegister(false);
       return data;
     } catch (error) {
       setFailedTryRegister(true);
     }
   };
+
+  useEffect(() => {
+    const fetchPresentsList = async () => {
+      try {
+        const response = await axios.get("/api/present/list");
+        setPresentsList(response.data);
+        console.log("api response", response.data);
+      } catch (error) {
+        console.error("Error fetching presents list:", error);
+      }
+    };
+
+    fetchPresentsList();
+  }, []);
 
   return (
     <>
@@ -134,7 +147,7 @@ export default function Index() {
               onClose={() => setFailedTryRegister(false)}
               dismissible
             >
-              Algo deu errado tente novamente.
+              Algo deu errado, tente novamente.
             </Alert>
           ) : null}
         </div>

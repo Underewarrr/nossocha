@@ -6,14 +6,14 @@ module.exports = {
         {
           role: "admin",
           email: "admin@admin.com",
-          password: "B393u10aED0RQ1N3PAEXQ7HxtLjKPEZBu",
+          password: "teste",
           balance: 0,
           hasPremium: true,
         },
         {
           role: "user",
           email: "user@user.com",
-          password: "B393u10aED0RQ1N3PAEXQ7HxtLjKPEZBu",
+          password: "teste",
           balance: 0,
           hasPremium: false,
         },
