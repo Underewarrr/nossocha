@@ -39,7 +39,16 @@ export default function Index() {
           property="og:image"
           content="https://example.com/images/cool-page.jpg"
         />
-     
+      <Alert variant="success">
+      <Alert.Heading>Hey, nice to see you</Alert.Heading>
+      <p>
+      Your template is working fine! Lets start code!
+      </p>
+      <hr />
+      <p className="mb-0">
+        If you need help contact me my email : rafhaelxd@gmai.com
+      </p>
+    </Alert>
     </>
   );
 }
