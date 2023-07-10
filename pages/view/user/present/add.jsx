@@ -113,9 +113,9 @@ export default function Index() {
             onChange={({ target: { value } }) => setPresent(value)}
           >
             <option value="">Select a present</option>
-            {presentsList.map((item, index) => (
-              <option key={index} value={item}>
-                {item}
+            {presentsList.map((present) => (
+              <option key={present.id} value={present.present}>
+                {present.present}
               </option>
             ))}
           </Form.Select>
