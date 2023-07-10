@@ -17,7 +17,7 @@ const Header = () => {
       <Container>
         
         <Navbar.Brand className={styles.header_title} href="/">       
-        
+        Nosso Cha
 </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className={styles.navbar_toggle} />
         <Navbar.Collapse id="responsive-navbar-nav">
