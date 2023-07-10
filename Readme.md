@@ -1,6 +1,9 @@
 ### Health Status
 ...
 ## NossoCha
+#### Hobby
+Este projto esta sendo feito por Hobby então pode ser que atualizações e novas features demorem a ser implementadas.
+
 #### Sobre o APP
 Usuario pode ver os presentes diponiveis e doar um dos presentes diponiveis na lista.
 Admin pode adicionar presentes para o usuario escolher, quando um persente é enviado o admin recebe uma notificação e pode aceitar ou recusar o presente recebido.
