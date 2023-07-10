@@ -30,7 +30,15 @@ export default function Index() {
   return (
     <>
      <Header />
+     <title>Nosso Cha Fullstack App By Rafhael Oliveira</title>
+    <meta name="description" content="Check this new awesome template fullstack for your present list" key="desc" />
+    <meta property="og:title" content="NossoCha - Fullstack" />
+    <meta property="og:description" content="Fullstack website for your event receive present easy using this tool" />
 
+        <meta
+          property="og:image"
+          content="https://example.com/images/cool-page.jpg"
+        />
      
     </>
   );
