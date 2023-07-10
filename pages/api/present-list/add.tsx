@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { Present } from "../../../interfaces";
-import presentService from "../../../services/present";
+import presentService from "../../../services/presentList";
 
 export default async function userHandler(
   req: NextApiRequest,

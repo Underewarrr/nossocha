@@ -99,17 +99,12 @@ export default function Index() {
 
         <Form.Group>
           <Form.Label>Present:</Form.Label>
-          <Form.Select
-            value={present}
+          <Form.Control
             onChange={({ target: { value } }) => setPresent(value)}
-          >
-            <option value="">Select a present</option>
-            {presentsList.map((item) => (
-              <option key={item.id} value={item.present}>
-                {item.present}
-              </option>
-            ))}
-          </Form.Select>
+            placeholder="Enter a present"
+            name="present"
+            type="text"
+          />
         </Form.Group>
 
         {loading ? <Loading isLoading={loading} /> : null}
@@ -138,7 +133,7 @@ export default function Index() {
               onClose={() => setFailedTryRegister(false)}
               dismissible
             >
-              Algo deu errado tente novamente.
+              Algo deu errado, tente novamente.
             </Alert>
           ) : null}
         </div>

@@ -98,7 +98,7 @@ const presentRegister = async (
 
 
   const dataValues = await presentListModel.create({
-    phone_number,
+    phone_number: 0,
     present,
     name,
     acepted: false,
