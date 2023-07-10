@@ -6,7 +6,9 @@ Este projto esta sendo feito por Hobby então pode ser que atualizações e nova
 
 #### Sobre o APP
 Usuario pode ver os presentes diponiveis e doar um dos presentes diponiveis na lista.
+
 Admin pode adicionar presentes para o usuario escolher, quando um persente é enviado o admin recebe uma notificação e pode aceitar ou recusar o presente recebido.
+
 Admin pode visualizar os presentes aceitados e recusados, assim como os atuais presentes disponiveis para o usuario.
 
 ### Testando o app
