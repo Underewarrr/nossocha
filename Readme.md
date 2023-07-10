@@ -1,9 +1,22 @@
 ### Health Status
 ...
+## NossoCha
+#### Sobre o APP
+Usuario pode ver os presentes diponiveis e doar um dos presentes diponiveis na lista.
+Admin pode adicionar presentes para o usuario escolher, quando um persente é enviado o admin recebe uma notificação e pode aceitar ou recusar o presente recebido.
+Admin pode visualizar os presentes aceitados e recusados, assim como os atuais presentes disponiveis para o usuario.
 
 ### Testando o app
+#### Admin Role
 Email: admin@admin.com
 Password: teste
+#### User Role
+Email: user@user.com
+Password: teste
+
+#### Melhorias
+O projeto pode possuir bugs assim como possiveis erros, ainda não foram implementados teste unitarios para manter uma melhor legibilidade do codigo assim como o eslint e o prettier ainda não estão configurados, o sistema de proteção de rotas pode ser melhorado para manter caminhos acessiveis apenas para o admin, como o projeto não usa o sistema de login do usuario eu o utilizei para ser o do admin, deveria existir 2 meio de proteção sendo um para o usuairo e um para o admin.
+
 
 ### Vercel
 - As funções [Serverless](https://vercel.com/docs/concepts/functions/serverless-functions) permitem que os desenvolvedores escrevam funções em JavaScript e outras linguagens para lidar com autenticação de usuário, envios de formulários, consultas de banco de dados  e muito mais.
