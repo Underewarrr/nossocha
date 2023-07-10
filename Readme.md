@@ -15,7 +15,7 @@ Admin pode visualizar os presentes aceitados e recusados, assim como os atuais p
 #### Admin Role
 Email: admin@admin.com
 Password: teste
-#### User Role
+#### User Role Não Usado.
 Email: user@user.com
 Password: teste
 
