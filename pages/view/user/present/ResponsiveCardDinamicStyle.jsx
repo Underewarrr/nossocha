@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Alert } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import axios from 'axios';
@@ -13,15 +13,22 @@ const ResponsiveCard = ({
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [isAccepted, setIsAccepted] = useState(acepted);
+  const [isEmailStored, setIsEmailStored] = useState(false); // New state for checking if email is stored
+
+  useEffect(() => {
+    const storedEmail = localStorage.getItem('email');
+    setIsEmailStored(storedEmail !== null); // Check if email is stored
+  }, []);
+
   const handleToggleAcceptance = async () => {
     setIsLoading(true);
-  
+
     try {
       const { data } = await axios.post(
         `/api/present/update?id=${presentId}`,
         {
           acepted: !isAccepted,
-          email: 'email@email.com',
+          email: localStorage.getItem('email'), // Use stored email
         },
         {
           headers: {
@@ -39,8 +46,6 @@ const ResponsiveCard = ({
       setIsLoading(false);
     }
   };
-  
-
 
   return (
     <Card className="main">
@@ -60,13 +65,21 @@ const ResponsiveCard = ({
             ) : (
               <Alert variant="danger">Your present has not been approved yet.</Alert>
             )}
-            {!isAccepted && (
-              <Button onClick={handleToggleAcceptance} variant="success" disabled={isLoading}>
+            {!isAccepted && isEmailStored && ( // Render the buttons only if email is stored
+              <Button
+                onClick={handleToggleAcceptance}
+                variant="success"
+                disabled={isLoading}
+              >
                 {isLoading ? 'Loading...' : 'Accept'}
               </Button>
             )}
-            {isAccepted && (
-              <Button onClick={handleToggleAcceptance} variant="danger" disabled={isLoading}>
+            {isAccepted && isEmailStored && ( // Render the buttons only if email is stored
+              <Button
+                onClick={handleToggleAcceptance}
+                variant="danger"
+                disabled={isLoading}
+              >
                 {isLoading ? 'Loading...' : 'Revoke'}
               </Button>
             )}

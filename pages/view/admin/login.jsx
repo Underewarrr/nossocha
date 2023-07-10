@@ -82,11 +82,11 @@ export default function Index() {
             >
               Login
             </Button>
-            <Button className="RegisterButton" variant="light" type="submit">
+            {/* <Button className="RegisterButton" variant="light" type="submit">
               <Link href="/user/register" className="text-dark">
                 Ainda não tenho conta
               </Link>
-            </Button>
+            </Button> */}
             {failedTryLogin ? (
               <Alert
                 variant="danger"
