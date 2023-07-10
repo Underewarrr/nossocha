@@ -22,6 +22,9 @@ Password: teste
 #### Melhorias
 O projeto pode possuir bugs assim como possiveis erros, ainda não foram implementados teste unitarios para manter uma melhor legibilidade do codigo assim como o eslint e o prettier ainda não estão configurados, o sistema de proteção de rotas pode ser melhorado para manter caminhos acessiveis apenas para o admin, como o projeto não usa o sistema de login do usuario eu o utilizei para ser o do admin, deveria existir 2 meio de proteção sendo um para o usuairo e um para o admin.
 
+### Template
+[Use este repositorio para iniciar um template com o sistema de login e auth!
+](https://github.com/Underewarrr/template-vercel-serverless-fullstack)
 
 ### Vercel
 - As funções [Serverless](https://vercel.com/docs/concepts/functions/serverless-functions) permitem que os desenvolvedores escrevam funções em JavaScript e outras linguagens para lidar com autenticação de usuário, envios de formulários, consultas de banco de dados  e muito mais.
