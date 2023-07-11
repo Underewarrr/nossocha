@@ -20,7 +20,7 @@ Email: user@user.com
 Password: teste
 
 #### Melhorias
-O projeto pode possuir bugs assim como possiveis erros, ainda não foram implementados teste unitarios para manter uma melhor legibilidade do codigo assim como o eslint e o prettier ainda não estão configurados, o sistema de proteção de rotas pode ser melhorado para manter caminhos acessiveis apenas para o admin, como o projeto não usa o sistema de login do usuario eu o utilizei para ser o do admin, deveria existir 2 meio de proteção sendo um para o usuairo e um para o admin.
+O projeto pode possuir bugs assim como possiveis erros, ainda não foram implementados teste unitarios para manter uma melhor legibilidade do codigo assim como o eslint e o prettier ainda não estão configurados, o sistema de proteção de rotas pode ser melhorado para manter caminhos acessiveis apenas para o admin, como o projeto não usa o sistema de login do usuario eu o utilizei para ser o do admin, deveria existir 2 meios de proteção sendo um para o usuairo e um para o admin.
 
 ### Template
 [Use este repositorio para iniciar um template com o sistema de login e auth!
